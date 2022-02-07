@@ -1,3 +1,9 @@
 /target/
 /.classpath
 /.project
+/target/
+/Leetcode.iml
+/.project
+/.classpath
+/.settings/
+/bin/
