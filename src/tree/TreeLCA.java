@@ -40,7 +40,7 @@ public class TreeLCA {
     }
 	
 	private static List<TreeNode> path(TreeNode root, TreeNode p) {
-		List<TreeNode>  list = new ArrayList<TreeNode>();
+		List<TreeNode>  list = new ArrayList<>();
 		if ((root.left != null && root.left.val == p.val) || (root.right != null && root.right.val == p.val)) {
 			list.add(p);
 			list.add(root);

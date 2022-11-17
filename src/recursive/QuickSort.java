@@ -6,12 +6,45 @@ public class QuickSort {
 
 	public static void main(String[] args) {
 			
-		int[] arr = new int[] {5,1,1,2,0,0 };
-			
-		arr = quickSort(arr);
-		
+		int[] arr = new int[] {1,5,3,2,8,7,6,4 };
+		quick(arr, 0, arr.length - 1);
 		print(arr);
 	}
+
+	public static void quick(int arr[], int begin, int end) {
+		if (begin < end) {
+			int i = partition(arr, begin, end);
+			quick(arr, 0, i-1);
+			quick(arr, i +1, end);
+		}
+	}
+
+	/*
+		x time:
+		O(n) + O(n/2) + O(n/4).... =>
+	 */
+
+	//    7 9 8 6 4 5  => 4 9 8 6 7 5 => 4 5 9 8 6 7
+	private static int partition(int[] arr, int begin, int end) {   //0   6
+
+		int pivot = arr[end];
+		int i = (begin-1);
+
+		for (int k = begin; k < end; k++) {
+			if (arr[k] <= pivot) {
+				i++;
+				int t = arr[k];
+				arr[k] = arr[i];
+				arr[i] = t;
+			}
+		}
+		int t = arr[i+1];
+		arr[i+1] = arr[end];
+		arr[end] = t;
+
+		return i+1;
+	}
+
 
 	// 1 5 3 2 8 7 6 4
 	
@@ -46,7 +79,7 @@ public class QuickSort {
 	
 	private static void print(int[] arr) {
 		for (int i : arr) {
-			System.out.print(i);
+			System.out.print(i + " ,");
 		}
 		System.out.println();
 	}
