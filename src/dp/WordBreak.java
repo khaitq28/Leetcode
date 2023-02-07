@@ -1,6 +1,7 @@
 package dp;
 
 import java.util.*;
+import java.util.stream.IntStream;
 
 /**
  * @author Quang-Khai TRAN
@@ -29,6 +30,7 @@ public class WordBreak {
         dict.add("leet"); dict.add("code");
 
         System.out.println(new WordBreak().wordBreak(s, dict));
+
     }
 
     List<String> wordDict;
