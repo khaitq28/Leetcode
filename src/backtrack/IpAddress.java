@@ -7,7 +7,7 @@ import java.util.List;
  * @author Quang-Khai TRAN
  */
 
-public class IpAdress {
+public class IpAddress {
 
     char[] arr;
     List<String> ret = new ArrayList<>();
@@ -25,7 +25,7 @@ public class IpAdress {
 
     public static void main(String[] args) {
         String s = "2525511135";
-        System.out.println(new IpAdress().restoreIpAddresses(s));
+        System.out.println(new IpAddress().restoreIpAddresses(s));
     }
 
     // 2525511135
